@@ -29,6 +29,7 @@ uri = v3/sample/
 user = {user}
 password = {password}
 ```
+> You must set the user and password properly
 
 ## Testing
 

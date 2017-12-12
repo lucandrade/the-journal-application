@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>The Journal API</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/">The Journal API</a>
+        </nav>
+        <div class="container-fluid">
+            <h1>{{ title }}</h1>
+            <ul class="list-unstyled">
+                {% if articles %}
+                {% for article in articles %}
+                <li class="list-group-item">
+                    <div class="media">
+                        <img class="align-self-center mr-3" src="{{ article.images.thumbnail.image }}" alt="Article Image">
+                        <div class="media-body">
+                            <h5 class="mt-0">{{ article.title }}</h5>
+                            <p>{{ article.excerpt }}</p>
+                        </div>
+                    </div>
+                </li>
+                {% endfor %}
+                {% else %}
+                <li class="list-group-item">No articles found</li>
+                {% endif %}
+            </ul>
+        </div>
+    </body>
+</html>

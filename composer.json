@@ -1,0 +1,27 @@
+{
+    "name": "lucas/thejournal",
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "phpunit/phpunit": "^7.0@dev",
+        "mockery/mockery": "^1.0@dev",
+        "orno/route": "dev-master",
+        "twig/twig": "^2.0"
+    },
+    "authors": [
+        {
+            "name": "Lucas Andrade",
+            "email": "lucas.me@yahoo.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    }
+}
